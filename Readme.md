@@ -32,7 +32,7 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 ## 🛠️ Projeto no ar
 
-* [Netlify]()
+* [Netlify](https://neonbank.netlify.app)
  
 ## 🎁 Expressões de gratidão
 
