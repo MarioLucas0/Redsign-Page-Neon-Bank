@@ -1,0 +1,1088 @@
+.s-hero {
+  width: 100%;
+  height: 78.6rem;
+  background: url('../img/bg-hero.svg') no-repeat center center;
+  padding-top: 17.5rem;
+
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+  .text {
+    width: 100%;
+    max-width: 68.4rem;
+
+    h3 {
+      opacity: 0.8;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 3.2rem;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 3.9rem;
+    }
+
+    ul {
+      width: 100%;
+      max-width: 62.1rem;
+      margin-top: 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 4.8rem;
+          height: 4.8rem;
+          background: linear-gradient(
+            180deg,
+            rgba(53, 203, 226, 0.4) 0%,
+            rgba(53, 202, 226, 0) 100%
+          );
+          border-radius: 50%;
+          @include flex(row, center, center);
+          margin-right: 1.2rem;
+        }
+        span {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .area-image {
+    width: 100%;
+    max-width: 70.6rem;
+    margin-right: -17.4rem;
+    h2 {
+      margin-bottom: 6.7rem;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+      opacity: 0.4;
+    }
+    .image {
+      position: relative;
+      width: 100%;
+      height: 54.1rem;
+      top: 4.3rem;
+      img {
+        position: absolute;
+      }
+      .card-front {
+        top: 4.1rem;
+        left: 0;
+        z-index: 2;
+        max-width: 43.5rem;
+        animation: floating 6s infinite;
+      }
+      .card-back {
+        bottom: 4.6rem;
+        right: 8.6rem;
+        z-index: 1;
+        max-width: 35.5rem;
+        animation: floating 7s infinite;
+      }
+      .circle {
+        top: 2.8rem;
+        left: 10.3rem;
+        max-width: 55.5rem;
+      }
+    }
+  }
+  @include responsive(1440px) {
+    .area-image {
+      margin-right: -11.4rem;
+    }
+  }
+  @include responsive(1366px) {
+    .area-image {
+      margin-right: -8rem;
+      .image {
+        .card-back {
+          right: 4rem;
+        }
+      }
+    }
+  }
+  @include responsive(1050px) {
+    height: 70.6rem;
+    padding-top: 14.5rem;
+    .area-image {
+      margin-right: -1rem;
+      h2 {
+        margin-top: 5rem;
+        margin-bottom: -0.3rem;
+        padding-left: 10rem;
+      }
+      .image {
+        height: 45rem;
+        .card-front {
+          max-width: 35rem;
+        }
+        .card-back {
+          max-width: 29rem;
+        }
+        .circle {
+          max-width: 46rem;
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    height: 108.1rem;
+    background-size: cover;
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .area-image {
+      .image {
+        .circle {
+          top: 0.8rem;
+          left: 15.3rem;
+        }
+        .card-front {
+          max-width: 36rem;
+          left: 56px;
+        }
+        .card-back {
+          right: 2rem;
+          bottom: 1.6rem;
+          max-width: 34rem;
+        }
+      }
+    }
+  }
+  @include responsive(768px) {
+    height: 100.1rem;
+    .text {
+      text-align: center;
+
+      ul {
+        margin: 0;
+      }
+      button {
+        margin-bottom: 3.9rem;
+      }
+      h3 {
+        margin-bottom: 2.4rem;
+      }
+      h1 {
+        font-size: 5rem;
+        margin-bottom: 2.6rem;
+      }
+    }
+    .area-image {
+      width: 51.1rem;
+      height: 42.8rem;
+      .image {
+        .card-front {
+          top: 6.1rem;
+          left: -50px;
+        }
+        .card-back {
+          top: 16rem;
+          right: -2rem;
+          max-width: 32rem;
+        }
+        .circle {
+          top: -0.2rem;
+          left: 2.3rem;
+        }
+      }
+      h2 {
+        padding: 0;
+      }
+    }
+  }
+  @include responsive(540px) {
+    .container {
+      .text {
+        h1 {
+          font-size: 4rem;
+        }
+        ul {
+          flex-direction: column;
+          li {
+            padding-left: 8rem;
+            width: 100%;
+          }
+        }
+      }
+      .area-image {
+        .image {
+          .card-front {
+            max-width: 30rem;
+            top: 5.1rem;
+            left: -10px;
+          }
+          .card-back {
+            max-width: 30rem;
+            top: 12rem;
+            right: 3rem;
+          }
+          .circle {
+            max-width: 38rem;
+            top: -0.2rem;
+            left: 5.3rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(450px) {
+    padding-top: 10.5rem;
+    height: 86.1rem;
+    .container {
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 2rem;
+        }
+        ul {
+          li {
+            padding-left: 3rem;
+          }
+        }
+      }
+      .area-image {
+        .image {
+          .card-front {
+            max-width: 21rem;
+            height: 14.7rem;
+            top: 7.1rem;
+            left: 58px;
+          }
+          .card-back {
+            max-width: 21rem;
+            height: 14.7rem;
+            top: 13rem;
+            right: 11rem;
+          }
+          .circle {
+            max-width: 26rem;
+            height: 23rem;
+            top: 1.8rem;
+            left: 11.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondary-hero {
+  padding-top: 12.9rem;
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+  .area-left {
+    width: 100%;
+    max-width: 27rem;
+    .mockup {
+      width: 100%;
+      max-width: 27rem;
+      position: relative;
+      margin-bottom: 5.9rem;
+      .circle {
+        position: absolute;
+        z-index: -1;
+        top: 8rem;
+        max-width: 37rem;
+        left: -21.5rem;
+      }
+      .cell {
+        z-index: 1;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .points {
+        margin-bottom: 2rem;
+      }
+      .icon-quadrado {
+        margin-bottom: 3.6rem;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-size: 1.6rem;
+          opacity: 0.7;
+          margin-bottom: 2.6rem;
+        }
+        .apple-store {
+          margin-bottom: 1.3rem;
+        }
+      }
+    }
+  }
+  .area-right {
+    width: 100%;
+    max-width: 80rem;
+    .main-text {
+      margin-top: 7rem;
+      .btn {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 112%;
+        letter-spacing: -0.5px;
+        color: $brand-blue;
+        display: flex;
+        align-items: end;
+        position: relative;
+        &:hover {
+          color: $green-light;
+        }
+        .border {
+          width: 1.2rem;
+          height: 0.3rem;
+          background: $brand-yellow;
+          position: absolute;
+          left: 20rem;
+        }
+      }
+    }
+    h2 {
+      max-width: 48.8rem;
+      color: $gray-600;
+      margin-bottom: 4.9rem;
+    }
+    .listas {
+      .lista {
+        height: 12.7rem;
+        max-width: 67rem;
+      }
+      ul {
+        li {
+          @include flex(row, center, space-between);
+          .info {
+            display: flex;
+            border-bottom: 1px solid rgba(225, 224, 231, 0.5);
+            .text {
+              margin-left: 4.3rem;
+              h3 {
+                padding-bottom: 0.3rem;
+              }
+              p {
+                font-size: 1.8rem;
+                opacity: 0.5rem;
+                color: $gray-400;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card-neon {
+      height: 410px;
+      background: url(../img/bg-box-card-neon.svg);
+      margin-top: 11rem;
+
+      position: relative;
+      .cartao {
+        width: 100%;
+        max-width: 42rem;
+        position: absolute;
+        top: 10rem;
+        right: -12rem;
+      }
+      .text {
+        max-width: 49rem;
+        padding-left: 7.2rem;
+        padding-block: 6.7rem;
+        h2 {
+          color: white;
+          margin-bottom: 1rem;
+        }
+        h3 {
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 0.8rem;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: 2.8rem;
+          line-height: 120%;
+          letter-spacing: -1px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 1.7rem;
+          line-height: 150%;
+          color: rgba(255, 255, 255, 0.8);
+          padding-bottom: 1rem;
+        }
+        .btn-primary {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+  }
+  @include responsive(1280px) {
+    .area-left {
+      .mockup {
+        .circle {
+          display: none;
+        }
+      }
+    }
+    .area-right {
+      .card-neon {
+        .text {
+          padding-left: 6.2rem;
+          padding-block: 9.7rem;
+        }
+        .cartao {
+          right: -8rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(1200px) {
+    .area-right {
+      max-width: 75rem;
+      margin-right: 2rem;
+    }
+  }
+  @include responsive(1050px) {
+    .area-right {
+      max-width: 63rem;
+      margin-right: 2.5rem;
+    }
+  }
+  @include responsive(990px) {
+    .container {
+      flex-direction: column-reverse;
+      align-items: center;
+      .area-left {
+        max-width: 68rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9.3rem;
+        .circle {
+          display: none;
+        }
+        .text {
+          .points {
+            display: none;
+          }
+          .icon-quadrado {
+            margin-top: 5rem;
+          }
+          .info {
+            p {
+              max-width: 26rem;
+              height: 6.6rem;
+              text-align: center;
+              margin-bottom: 4.4rem;
+            }
+          }
+        }
+      }
+      .area-left {
+      }
+      .text {
+        margin-left: 1.3rem;
+      }
+      .area-right {
+        .main-text {
+          position: relative;
+          h2 {
+            margin: 0 auto;
+            font-size: 3.8rem;
+            margin-bottom: 4rem;
+            text-align: center;
+          }
+          .listas {
+            margin-top: 2rem;
+            .lista {
+              max-width: 75rem;
+              padding-top: 2rem;
+              .text {
+                max-width: 55rem;
+                margin-left: 2.3rem;
+              }
+              li {
+                margin: 0;
+              }
+            }
+          }
+          .btn {
+            left: 24rem;
+          }
+        }
+        .card-neon {
+          max-width: 68rem;
+          height: 35rem;
+          margin-inline: auto;
+          .text {
+            max-width: 37.7rem;
+            height: 25.3rem;
+            margin: 0;
+            padding-left: 3.6rem;
+            h2 {
+              font-size: 3rem;
+              margin-bottom: 2rem;
+            }
+            h3 {
+              font-size: 2.4rem;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-size: 1.4rem;
+            }
+          }
+          .cartao {
+            top: 7rem;
+            right: -11rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(800px) {
+    .container {
+      .area-left {
+        margin-top: 13.3rem;
+      }
+      .area-right {
+        .card-neon {
+          height: 47rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          border-radius: 10px;
+          margin-top: 6rem;
+          .text {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 5rem 0;
+            .btns {
+              display: flex;
+            }
+          }
+          .cartao {
+            max-width: 35rem;
+            top: 33rem;
+            right: 14rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(650px) {
+    .container {
+      margin: 0 auto;
+      .area-right {
+        margin-left: 2.2rem;
+      }
+    }
+  }
+  @include responsive(470px) {
+    .container {
+      .area-right {
+        margin: 0;
+        .main-text {
+          .btn {
+            left: 11rem;
+            top: 3rem;
+          }
+        }
+        .card-neon {
+          background-position: center center;
+          border-radius: 10px;
+          .cartao {
+            max-width: 30rem;
+
+            right: 8rem;
+          }
+        }
+        .listas {
+          .lista {
+            .info {
+              img {
+                margin-bottom: 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(390px) {
+    .container {
+      .area-right {
+        .card-neon {
+          .cartao {
+            max-width: 27rem;
+            right: 4rem;
+            top: 37rem;
+          }
+        }
+        .main-text {
+          .btn {
+            left: 7rem;
+            top: 4rem;
+          }
+        }
+      }
+      .area-left {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .text {
+          margin: 0;
+        }
+        .mockup {
+          margin-left: 9rem;
+
+          .cell {
+            margin-top: 8rem;
+            height: 37.9rem;
+          }
+        }
+        .fundo-mockup {
+          position: absolute;
+          z-index: -2;
+          max-width: 37rem;
+          height: 30rem;
+          background: linear-gradient(
+            180deg,
+            #f7f7fa 0%,
+            rgba(247, 247, 250, 0.052) 100%
+          );
+          transform: matrix(1, 0, 0, -1, 0, 0);
+          top: 35rem;
+          left: -5.6rem;
+          width: 375px;
+          height: 214px;
+        }
+      }
+    }
+  }
+}
+.third-hero {
+  margin-top: 10rem;
+  height: 33.7rem;
+  .top {
+    width: 100%;
+    margin-bottom: 5rem;
+    h3 {
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 112%;
+      letter-spacing: -1px;
+      color: #c6c5ce;
+      opacity: 0.8;
+    }
+    .pagination {
+      display: flex;
+      justify-content: end;
+      align-items: self-end;
+      .swiper-pagination-bullet {
+        background: $brand-yellow;
+        opacity: 0.3;
+        border-radius: 12px;
+        transition: all 0.5s;
+        &:not(first-child) {
+          margin-left: 0.4rem;
+        }
+        &-active {
+          opacity: 1;
+          width: 17.23px;
+        }
+      }
+    }
+  }
+  .cards-depoimentos {
+    .card-depoimento {
+      padding: 0 2rem;
+      p {
+        height: 10rem;
+        overflow: hidden;
+      }
+    }
+  }
+  .container {
+    @include responsive(768px) {
+      .container {
+        .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h2:first-child {
+            padding-top: 5.4rem;
+            color: $gray-600;
+          }
+        }
+        .points2 {
+          margin-block: 5.1rem;
+          width: 100%;
+          img {
+            margin: 0 auto;
+          }
+        }
+        .cards-depoimentos {
+          .card-depoimento {
+            width: 48%;
+            height: 20.9rem;
+            margin: 0;
+            p {
+              font-size: 1.8rem;
+            }
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    @include responsive(992px) {
+      .container {
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .points2 {
+          margin-top: 3.4rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    padding-top: 7.6rem;
+    .container {
+      padding: 0;
+    }
+    .top {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      h3 {
+        padding-bottom: 0.9rem;
+      }
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        max-width: 27.5rem;
+        margin-bottom: 3.4rem;
+      }
+    }
+  }
+}
+
+.four-hero {
+  width: 100%;
+  height: 68rem;
+
+  .container {
+    position: relative;
+  }
+  .main-text {
+    margin-top: 13.8rem;
+    max-width: 54rem;
+    height: 52.1rem;
+    h2:first-child {
+      color: $gray-200;
+      padding-bottom: 0.7rem;
+      width: 54rem;
+    }
+    h2 {
+      padding-bottom: 4.5rem;
+    }
+    .infos {
+      max-width: 50.4rem;
+      height: 5.3rem;
+      .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.7rem;
+        .icon {
+          background: $green-light;
+          width: 4.5rem;
+          height: 4.5rem;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .text {
+          margin-left: 2.5rem;
+          h3 {
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 112%;
+            letter-spacing: -0.5px;
+            color: $gray-400;
+          }
+          p {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: $gray-300;
+          }
+        }
+      }
+    }
+  }
+  .area-image {
+    width: 71.9rem;
+    height: 59rem;
+    position: absolute;
+    right: -19.6rem;
+    top: -3rem;
+
+    .image {
+      position: relative;
+      img {
+        position: absolute;
+      }
+      .cell-1 {
+        right: 55rem;
+        top: 8.6rem;
+        width: 22rem;
+        height: 47.1rem;
+      }
+      .cell-2 {
+        right: 30.6rem;
+        width: 22rem;
+        height: 47.1rem;
+      }
+      .circle {
+        right: 4rem;
+        top: 9rem;
+        height: 50.8rem;
+        width: 51rem;
+        z-index: -1;
+      }
+    }
+  }
+  @include responsive(768px) {
+    height: 145.7rem;
+    .main-text {
+      max-width: 63rem;
+      margin: 16.6rem 6.9rem;
+      .infos {
+        max-width: 63rem;
+        h3 {
+          padding-bottom: 0.3rem;
+          line-height: 150%;
+        }
+      }
+      button {
+        margin-top: 4.9rem;
+        margin-left: 20.5rem;
+      }
+    }
+    .area-image {
+      right: -16.6rem;
+      top: 67rem;
+      .image {
+        .circle {
+          right: 27rem;
+          top: 9rem;
+          height: 49.8rem;
+          width: 51rem;
+          z-index: -1;
+        }
+        .cell-1 {
+          right: 56rem;
+          top: 8.6rem;
+          width: 20rem;
+          height: 47.1rem;
+        }
+        .cell-2 {
+          top: 3rem;
+          right: 30.6rem;
+          width: 22rem;
+          height: 43.1rem;
+        }
+      }
+    }
+  }
+  @include responsive(1060px) {
+    .container {
+      .area-image {
+        .image {
+          .cell-1 {
+            right: 46rem;
+          }
+          .cell-2 {
+            right: 22rem;
+          }
+          .circle {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .main-text {
+        padding-left: 1rem;
+      }
+      .area-image {
+        .image {
+          .cell-1 {
+            display: none;
+          }
+          .cell-2 {
+            right: 24rem;
+            top: 5rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(770px) {
+    height: 115.7rem;
+    .container {
+      .main-text {
+        margin: 8.6rem 0;
+        button {
+          margin-top: 0.9rem;
+        }
+      }
+      .area-image {
+        .image {
+          .cell-1 {
+            display: block;
+            width: 28rem;
+            height: 49.1rem;
+            top: -3.4rem;
+            right: 58rem;
+          }
+          .cell-2 {
+            width: 24rem;
+            height: 49.1rem;
+            top: -3rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(600px) {
+    .container {
+      .main-text {
+        button {
+          margin-left: 15.6rem;
+        }
+      }
+      .area-image {
+        .image {
+          .cell-2 {
+            width: 22rem;
+            height: 45.1rem;
+            top: 2rem;
+          }
+          .cell-1 {
+            width: 30rem;
+            height: 45.1rem;
+            top: -9.4rem;
+            right: 45rem;
+          }
+          .circle {
+            display: block;
+            right: 22rem;
+            top: -5rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(375px) {
+    height: 144.7rem;
+    .container {
+      .main-text {
+        align-items: center;
+        .infos {
+          button {
+            margin-left: 5.6rem;
+            margin-top: 0.9rem;
+          }
+          .icon {
+            margin-bottom: 1.6rem;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            h3 {
+              width: 29rem;
+              height: 2.2rem;
+              font-size: 2rem;
+            }
+            .text {
+              p {
+                text-align: center;
+                width: 19.2rem;
+                height: 6.3rem;
+                align-items: center;
+                margin: 0 4rem;
+              }
+            }
+          }
+        }
+      }
+      .area-image {
+        .image {
+          .cell-1 {
+            width: 16.8rem;
+            height: 35.6rem;
+            top: 34.6rem;
+            right: 37rem;
+          }
+          .cell-2 {
+            width: 16.8rem;
+            height: 35.6rem;
+            right: 18rem;
+            top: 26rem;
+          }
+          .circle {
+            width: 32rem;
+            height: 32rem;
+            right: 19rem;
+            top: 42rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
