@@ -32,7 +32,7 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 ## 🛠️ Projeto no ar
 
-* [Netlify](https://projetoneonn.netlify.app/)
+* [Vercel](https://redsignpageneonbank.vercel.app/)
  
 ## 🎁 Expressões de gratidão
 
